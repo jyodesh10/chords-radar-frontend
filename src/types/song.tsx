@@ -7,5 +7,5 @@ export interface Song {
   category: string;
   content: string;
   docId: string;
-  timeStamp: Date;
+  timeStamp: number;
 }

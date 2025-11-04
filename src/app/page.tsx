@@ -4,6 +4,7 @@ import SearchBar from "@/components/SearchBar";
 import { db } from "@/lib/firebase";
 import { Song } from "@/types/song";
 import { collection, getDocs } from "firebase/firestore";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -35,9 +36,18 @@ export default function HomePage() {
       <main className="max-w-3xl mx-auto">
         {/* Top search bar */}
         <div className="bg-teal-800 p-10">
-          <h1 className="font-bold text-2xl mb-5 text-white">
-            Chords Radar Nepal
-          </h1>
+          <div className="flex items-center mb-4">
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="items-center mr-4"
+            />
+            <h1 className="font-medium text-2xl mb-5 text-white">
+              Chords Radar Nepal
+            </h1>
+          </div>
           <SearchBar value={query} onChange={setQuery} />
         </div>
 
