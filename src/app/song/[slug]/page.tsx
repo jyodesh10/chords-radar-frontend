@@ -25,6 +25,7 @@ export default async function SongDetailPage( {params} : SongPageProps ) {
     ...raw,
     timeStamp: raw.timeStamp.toMillis(),
   } as Song; 
+  
 
   return (
     <div className="max-w-3xl mx-auto bg-neutral-900">
