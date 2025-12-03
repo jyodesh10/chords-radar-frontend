@@ -28,8 +28,8 @@ export default async function SongDetailPage( {params} : SongPageProps ) {
   
 
   return (
-    <div className="max-w-3xl mx-auto bg-neutral-900">
-      <SongDetailComponent song={song} />
-    </div>
+    <SongDetailComponent song={song} />
+    // <div className="max-w-3xl mx-auto bg-neutral-900">
+    // </div>
   );
 }

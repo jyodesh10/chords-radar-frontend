@@ -23,7 +23,7 @@ export default function SongListClient({ initialSongs, recentSongs }: SongListCl
   );
 
   return (
-    <main className="max-w-3xl mx-auto">
+    <main className="max-w-5xl mx-auto">
       {/* Top search bar */}
       <div className="bg-teal-800 p-10">
         <div className="flex items-center mb-4">

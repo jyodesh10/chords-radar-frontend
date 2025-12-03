@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chords Radar Nepal",
-  description: "Nepali Music Chords",
+  title: {
+    default: "Chords Radar Nepal",
+    template: "%s | Chords Radar Nepal",
+  },
+  keywords: ["nepali chords", "nepali guitar chords", "chords radar nepal", "nepali songs", "nepali"  ],
+  description: "Chords Radar Nepal: Nepali Chords is a user-friendly Nepali chords website that aims to simplify the process of learning and playing your favorite Nepali songs on the guitar. Whether you're a beginner or an experienced guitarist, Chords Radar provides a comprehensive set of features to enhance your musical journey.",
 };
 
 export default function RootLayout({

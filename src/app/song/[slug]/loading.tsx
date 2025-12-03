@@ -1,6 +1,6 @@
 export default function LoadingState () {
     return (
-        <div className="max-w-3xl mx-auto bg-neutral-900 animate-pulse min-h-screen">
+        <div className="max-w-4xl mx-auto bg-neutral-900 animate-pulse min-h-screen">
             {/* Header Section Skeleton */}
             <div className="bg-teal-800 p-10">
                 <div className="flex items-center">
