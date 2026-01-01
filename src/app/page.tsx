@@ -1,8 +1,8 @@
+export const dynamic = 'force-dynamic';
 import SongListClient from "@/components/SongListClient";
 import { db } from "@/lib/firebase";
 import { Song } from "@/types/song";
 import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
-
 async function getSongs(): Promise<Song[]> {
   const querySnapshot = await getDocs(collection(db, "songs"));
   return querySnapshot.docs
