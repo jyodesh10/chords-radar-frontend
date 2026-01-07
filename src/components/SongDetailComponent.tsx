@@ -30,7 +30,7 @@ export default function SongDetailComponent ({ song }: { song: Song }) {
     const containerRef = useRef<HTMLDivElement>(null); 
     
     const [playing, setPlaying] = useState(false);
-    const [scrollSpeed, setScrollSpeed] = useState(120); // Default speed: 40ms interval
+    const [scrollSpeed, setScrollSpeed] = useState(600); // Default speed: 40ms interval
     const [url, setUrl] = useState('');
     const pathname = usePathname()
 

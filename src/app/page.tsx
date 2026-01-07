@@ -3,6 +3,7 @@ import SongListClient from "@/components/SongListClient";
 import { db } from "@/lib/firebase";
 import { Song } from "@/types/song";
 import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+
 async function getSongs(): Promise<Song[]> {
   const querySnapshot = await getDocs(collection(db, "songs"));
   return querySnapshot.docs
@@ -17,8 +18,11 @@ async function getSongs(): Promise<Song[]> {
 }
 
 async function getRecentSongs(): Promise<Song[]> {
-  const recentSongsQuery = query(collection(db, "songs"), orderBy("timeStamp", "desc"), limit(5));
+  const recentSongsQuery = query(collection(db, "songs"), orderBy("timeStamp", "desc"), limit(10));
   const querySnapshot = await getDocs(recentSongsQuery);
+
+
+
   return querySnapshot.docs.map((doc) => {
     const data = doc.data();
     return {
